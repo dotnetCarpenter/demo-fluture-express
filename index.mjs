@@ -8,7 +8,7 @@ const dispatch = dispatcher (path.resolve (import.meta.dirname, "actions"))
 app.set ("view engine", "ejs")
 app.set ("views", path.join (import.meta.dirname, "views"))
 
-app.use (dispatch ("session.mjs"))
+app.use (dispatch ("session.js"))
 app.get ("/", dispatch ("welcome.mjs"))
 // app.get ("/json", dispatch ("welcomeJson"))
 // app.get ("/image", dispatch ("image"))
