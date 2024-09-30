@@ -1,8 +1,9 @@
-import {Redirect} from "fluture-express"
-import {resolve,reject} from "fluture"
+import { Redirect, Next /*, Response, Head, Body*/ } from "fluture-express"
+import { resolve } from "fluture"
 
-export default _ => request => {
-  return request.path = "test1"
+export default locals => request => {
+  return request.path === "test1"
     ? resolve (Redirect ("/"))
-    : reject ()
+    : resolve (Next (locals))
+    // : resolve (Response.Respond ([Head.Status (404)], Body.None))
 }
