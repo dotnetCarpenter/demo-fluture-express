@@ -11,7 +11,7 @@ app.set ("views", path.join (import.meta.dirname, "views"))
 app.use (dispatch ("session.js"))
 app.get ("/", dispatch ("welcome.mjs"))
 app.get ("/test1", dispatch ("redirect.mjs"))
-app.get ("/test3", dispatch ("redirect.mjs"))
+app.get ("/test3", dispatch ("redirectTo404.mjs"))
 
 // app.get ("/json", dispatch ("welcomeJson"))
 // app.get ("/image", dispatch ("image"))
